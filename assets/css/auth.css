@@ -1,0 +1,225 @@
+/*
+ * auth.css — Login & Register UI Styles
+ * Pokhara Metropolitan Waste System — v4.0
+ * Theme: Deep Blue (#023e8a) + Sky Blue (#0096c7) + White
+ */
+
+/* ===== AUTH BACKGROUND ===== */
+.auth-bg {
+    min-height: 100vh;
+    background: linear-gradient(135deg, #023e8a 0%, #0077b6 50%, #0096c7 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 30px 16px;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* ===== AUTH CARD ===== */
+.auth-card {
+    background: #ffffff;
+    border-radius: 16px;
+    box-shadow: 0 8px 40px rgba(2, 62, 138, 0.2), 0 2px 12px rgba(0, 0, 0, 0.08);
+    padding: 32px 28px;
+    width: 100%;
+    max-width: 420px;
+    margin: 0 auto;
+    text-align: center;
+    border: 1px solid rgba(0, 150, 199, 0.2);
+    position: relative;
+    overflow: hidden;
+}
+
+/* Subtle top accent line */
+.auth-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: linear-gradient(90deg, #023e8a, #0096c7);
+    border-radius: 16px 16px 0 0;
+}
+
+/* ===== LOGO ===== */
+.auth-logo {
+    width: 80px;
+    height: 80px;
+    object-fit: contain;
+    margin-bottom: 10px;
+    filter: drop-shadow(0 2px 8px rgba(2, 62, 138, 0.18));
+}
+
+/* ===== TITLES ===== */
+.auth-title {
+    font-size: 1.15rem;
+    font-weight: 700;
+    color: #023e8a;
+    margin-bottom: 2px;
+    letter-spacing: 0.2px;
+}
+
+.auth-subtitle {
+    font-size: 0.7rem;
+    font-weight: 600;
+    color: #0077b6;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+}
+
+/* ===== FORM ===== */
+.auth-form {
+    text-align: left;
+    margin-top: 4px;
+}
+
+.auth-form .form-label {
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: #023e8a;
+    margin-bottom: 5px;
+}
+
+.auth-form .form-control,
+.auth-form .form-select {
+    border-radius: 9px;
+    border: 1.5px solid #cce3f0;
+    padding: 9px 13px;
+    font-size: 0.9rem;
+    font-family: 'Poppins', sans-serif;
+    transition: border-color 0.2s, box-shadow 0.2s;
+    background: #f4f9fc;
+    color: #0d1b2a;
+}
+
+.auth-form .form-control:focus,
+.auth-form .form-select:focus {
+    border-color: #0077b6;
+    box-shadow: 0 0 0 3px rgba(0, 119, 182, 0.12);
+    outline: none;
+    background: #fff;
+}
+
+.auth-form .form-control::placeholder {
+    color: #5a7184;
+    font-size: 0.85rem;
+}
+
+/* ===== PRIMARY BUTTON ===== */
+.btn-auth-primary {
+    width: 100%;
+    padding: 11px 20px;
+    background: linear-gradient(135deg, #023e8a, #0077b6);
+    color: #fff;
+    border: none;
+    border-radius: 9px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 0.95rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.25s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    letter-spacing: 0.3px;
+}
+
+.btn-auth-primary:hover {
+    background: linear-gradient(135deg, #0077b6, #0096c7);
+    box-shadow: 0 4px 18px rgba(0, 119, 182, 0.35);
+    transform: translateY(-1px);
+}
+
+.btn-auth-primary:active {
+    transform: translateY(0);
+}
+
+/* ===== DIVIDER ===== */
+.auth-divider {
+    height: 1px;
+    background: linear-gradient(90deg, transparent, #cce3f0, transparent);
+    margin: 18px 0 14px;
+}
+
+/* ===== LINK ===== */
+.auth-link {
+    color: #0077b6;
+    font-weight: 600;
+    text-decoration: none;
+    transition: color 0.2s;
+}
+
+.auth-link:hover {
+    color: #023e8a;
+    text-decoration: underline;
+}
+
+/* ===== ALERTS ===== */
+.auth-card .alert {
+    border-radius: 9px;
+    font-size: 0.85rem;
+    border: none;
+    margin-bottom: 14px;
+}
+
+.auth-card .alert-danger {
+    background: #fef2f2;
+    color: #b91c1c;
+    border-left: 3px solid #ef4444;
+}
+
+.auth-card .alert-success {
+    background: #e8f4fd;
+    color: #023e8a;
+    border-left: 3px solid #0096c7;
+}
+
+.auth-card .alert-info {
+    background: #e8f4fd;
+    color: #0077b6;
+    border-left: 3px solid #0096c7;
+}
+
+/* ===== text-primary override for icons ===== */
+.auth-form .text-primary {
+    color: #0077b6 !important;
+}
+
+/* ===== REGISTER CARD (slightly wider) ===== */
+.auth-card.register-card {
+    max-width: 540px;
+    padding: 28px 24px;
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 576px) {
+    .auth-card {
+        padding: 22px 16px;
+        border-radius: 12px;
+        max-width: 100%;
+    }
+
+    .auth-logo {
+        width: 64px;
+        height: 64px;
+    }
+
+    .auth-title {
+        font-size: 1rem;
+    }
+
+    .auth-card.register-card {
+        max-width: 100%;
+    }
+
+    .auth-form .row {
+        flex-direction: column;
+    }
+
+    .auth-form .col-md-6 {
+        width: 100%;
+    }
+}

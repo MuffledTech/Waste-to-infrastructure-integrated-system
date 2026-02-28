@@ -1,0 +1,58 @@
+# Waste to Infrastructure Management System
+# Detailed Setup Instructions
+
+This system allows citizens to report waste, collectors to pick it up, and admins to fund infrastructure projects with the generated revenue.
+
+## Prerequisites
+1.  **XAMPP**: Download and install XAMPP from https://www.apachefriends.org/
+2.  **Browser**: Chrome, Firefox, or Edge.
+
+## Installation Steps
+
+### 1. Place Project Files
+    - Copy the `waste_system` folder to your XAMPP `htdocs` directory.
+      Typically: `C:\xampp\htdocs\waste_system`
+
+### 2. Configure Database
+    - Open XAMPP Control Panel and Start **Apache** and **MySQL**.
+    - Open your browser and go to: `http://localhost/phpmyadmin`
+    - Click **New** on the left sidebar.
+    - Create a database named `waste_management_system`.
+    - Click **Import** in the top menu.
+    - Choose the file `database.sql` located in `waste_system/database.sql`.
+    - Click **Go** at the bottom to import the tables.
+
+### 3. Setup Offline Assets (Optional but Recommended)
+    - If you want the system to look good without internet:
+    - Double-click `setup_assets.bat` inside the `waste_system` folder.
+    - This will download Bootstrap and Chart.js to the local assets folder.
+    - If the script fails, you can manually download:
+        - Bootstrap CSS -> assets/css/bootstrap.min.css
+        - Bootstrap JS -> assets/js/bootstrap.bundle.min.js
+        - Chart.js -> assets/js/chart.js
+
+### 4. Run the System
+    - Open your browser and visit: `http://localhost/waste_system`
+
+## Default Login Credentials
+
+### Admin (Municipality/Central)
+- Email: `admin@waste.gov`
+- Password: `admin123`
+
+### Collector
+- Email: `collector@waste.gov`
+- Password: `collector123`
+
+### Citizen
+- Email: `citizen@waste.gov`
+- Password: `citizen123`
+
+## Features
+- **Citizen**: Report waste with photo, view status, earn points.
+- **Collector**: View pending waste, accept jobs, upload verification.
+- **Admin**: Approve reports, analytics dashboard, create infrastructure projects.
+
+## Troubleshooting
+- **Database Error**: Check `config/db.php` if your MySQL password is not empty (default XAMPP has no password).
+- **Uploads not working**: Ensure `uploads` folder exists and has write permissions.
